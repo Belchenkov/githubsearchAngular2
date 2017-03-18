@@ -1,15 +1,14 @@
+import { Angular2githubsearchPage } from './app.po';
 
-describe('QuickStart E2E Tests', function () {
+describe('angular2githubsearch App', function() {
+  let page: Angular2githubsearchPage;
 
-  let expectedMsg = 'My First Angular App';
-
-
-  beforeEach(function () {
-    browser.get('');
+  beforeEach(() => {
+    page = new Angular2githubsearchPage();
   });
 
-  it('should display: ' + expectedMsg, function () {
-    expect(element(by.css('h1')).getText()).toEqual(expectedMsg);
+  it('should display message saying app works', () => {
+    page.navigateTo();
+    expect(page.getParagraphText()).toEqual('app works!');
   });
-
 });

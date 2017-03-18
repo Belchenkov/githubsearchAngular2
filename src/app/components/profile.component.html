@@ -11,7 +11,7 @@
 <div *ngIf="user">
    <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><em>{{user.name}}</em></h3>
+          <h3 class="panel-title"><strong><em>{{user.name}}</em></strong></h3>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="stats">
-                        <span class="label label-default">{{user.public_repos}} Public Repos</span>
+                        <span class="label label-warning">{{user.public_repos}} Public Repos</span>
                         <span class="label label-primary">{{user.public_gists}} Public Gists</span>
                         <span class="label label-success">{{user.followers}} Followers</span>
                         <span class="label label-info">{{user.following}} Following</span>
@@ -51,7 +51,7 @@
                         <p>{{repo.description}}</p>
                     </div>
                     <div class="col-md-3">
-                        <span class="label label-default">{{repo.watchers}} Watchers</span>
+                        <span class="label label-warning">{{repo.watchers}} Watchers</span>
                         <span class="label label-primary">{{repo.forks}} Forks</span>
                     </div>
                   </div>
