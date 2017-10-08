@@ -8,7 +8,11 @@ import {ProfileComponent} from './components/profile.component';
 
 @NgModule({
   imports: [ BrowserModule, HttpModule, FormsModule ],
-  declarations: [ AppComponent, ProfileComponent ],
+  declarations: [
+    AppComponent,
+    ProfileComponent
+
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

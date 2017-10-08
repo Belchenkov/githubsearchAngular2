@@ -1,0 +1,50 @@
+<div class="search__block">
+  <div class="search__input container">
+    <h1>Start type github username</h1>
+      <md-form-field>
+        <input
+          mdInput
+          placeholder="Start type user name ..."
+          [(ngModel)]="searchStr"
+          [minlength]="minLength"
+          (ngModelChange)="handleChange()"
+        >
+        <md-error>
+          Min length is {{ minLength }}. Now it is {{ searchStr.length }}
+        </md-error>
+      </md-form-field>
+  </div>
+
+  <md-card class="card" *ngIf="isLoaded">
+    <md-card-header>
+      <md-card-title>{{ user.name }}</md-card-title>
+      <md-card-subtitle>{{ user.location }}</md-card-subtitle>
+    </md-card-header>
+    <img
+      width="150"
+      height="150"
+      md-card-image
+      [src]="user.avatar_url"
+      [alt]="user.name"
+    >
+    <md-card-content>
+      <ul>
+          <li>public_repos {{ user.public_repos}}</li>
+          <li>blog {{ user.blog}}</li>
+          <li>followers {{ user.followers}}</li>
+          <li>created_at {{ user.created_at}}</li>
+      </ul>
+    </md-card-content>
+    <md-card-actions class="center">
+      <a
+        target="_blank"
+        md-button
+        [href]="user.html_url"
+      >
+        <button md-raised-button color="warn">View Profile</button>
+      </a>
+
+    </md-card-actions>
+  </md-card>
+
+</div>
